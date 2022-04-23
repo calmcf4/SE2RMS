@@ -1,0 +1,182 @@
+﻿<Window x:Class="SE2RMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SE2RMS"
+        mc:Ignorable="d"
+        Title="Woodlands University College Record Management System" Height="768" Width="1366" >
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" ShowGridLines="False" Height="auto" Width="auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Background="#ade1ee" Height="auto">
+                <Button Content="?" Foreground="White" FontSize="12" Grid.Column="0" Height="20" Width="20"  VerticalAlignment="Top" Margin="0,5,0,0" Click="Button_Click_1" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <Ellipse Fill="#020001"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+            <Grid Grid.Column="1" Background="#ade1ee">
+                <Image Source="Images/newLogo.jpeg" Margin="5,5,5,5" />
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" ShowGridLines="False" Background="#ade1ee">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="1" ShowGridLines="False" Background="#ade1ee">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" ShowGridLines="False" Background="#ade1ee">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="40"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Content="Profile" Height="20" Background="#568259" Width="40" FontSize="10" Foreground="White" FontFamily="Segoe UI Light">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Grid.Column="1" Content="My Messages" Height="20" Margin="8,0,8,0" Background="#568259" Width="80" FontSize ="10" Foreground="White" FontFamily="Segoe UI Light">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Grid.Column="2" Content="Logout" Height="20" Background="#568259" Width="40" FontSize="10" Foreground="white" FontFamily="Segoe UI Light">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+                <TextBox Grid.Row="1" Width="120" Height="20" BorderBrush="Black" Text="Search...">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5" />
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+
+        </Grid>
+        <Grid ShowGridLines="False" Grid.Column="0" Grid.Row="1" Background="#ade1ee">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid ShowGridLines="False" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Content="Home" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="1" Content="Students" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="2" Content="Tutors" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="3" Content="Timetables" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="4" Content="Courses" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="5" Content="Attendance" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="6" Content="Calendar" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="7" Content="Grades" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="8" Content="Assessments" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="9" Content="Settings" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
