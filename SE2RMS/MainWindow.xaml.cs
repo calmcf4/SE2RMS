@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SE2RMS.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,10 +35,26 @@ namespace SE2RMS
         {            
         }
 
-        private void timeTableBtnClick(object sender, RoutedEventArgs e)
+        private void timeTableButtonClick(object sender, RoutedEventArgs e)
         {
             info.Content = new Timetable();
             title.Text = "Timetables";
+            yearComboBox.Visibility = Visibility.Visible;
+            timetablesButton.Background = new SolidColorBrush(Colors.White);
+            timetablesButton.Foreground = new SolidColorBrush(Colors.Black);
+            modulesButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
+            modulesButton.Foreground = new SolidColorBrush (Colors.White);
+        }
+
+        private void modulesButtonClick(object sender, RoutedEventArgs e)
+        {
+            info.Content = new Modules();
+            title.Text = "Modules";
+            yearComboBox.Visibility = Visibility.Visible;
+            modulesButton.Background = new SolidColorBrush(Colors.White);
+            modulesButton.Foreground = new SolidColorBrush(Colors.Black);
+            timetablesButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
+            timetablesButton.Foreground = new SolidColorBrush (Colors.White);
         }
     }
 

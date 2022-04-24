@@ -6,14 +6,15 @@
         xmlns:local="clr-namespace:SE2RMS"
         mc:Ignorable="d"
         Title="Woodlands University College Record Management System" Height="768" Width="1366" >
-    <Grid ShowGridLines="false">
+    <Grid ShowGridLines="false" Background="#ade1ee">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="90"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.Column="0" ShowGridLines="False" Height="auto" Width="auto">
             <Grid.ColumnDefinitions>
@@ -44,7 +45,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="title" Grid.Column="0" Text="Home" FontFamily="Segoe UI Bold" Foreground="White" FontSize="50" VerticalAlignment="Bottom" Margin="20,0,0,0"/>
+            <TextBlock x:Name="title" Grid.Column="0" Text="Home" FontFamily="Segoe UI Bold" Foreground="White" FontSize="50" VerticalAlignment="Bottom" Margin="20,0,0,0">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
             <Grid Grid.Column="1" ShowGridLines="False" Background="#ade1ee">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="45"></RowDefinition>
@@ -88,7 +93,7 @@
             </Grid>
 
         </Grid>
-        <Grid ShowGridLines="False" Grid.Column="0" Grid.Row="1" Background="#ade1ee">
+        <Grid ShowGridLines="False" Grid.Column="0" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="auto" />
@@ -128,14 +133,14 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Grid.Row="3" Content="Timetables" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="timeTableBtnClick">
+                <Button x:Name="timetablesButton" Grid.Row="3" Content="Timetables" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="timeTableButtonClick">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Grid.Row="4" Content="Courses" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                <Button x:Name="modulesButton" Grid.Row="4" Content="Modules" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="modulesButtonClick">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
@@ -180,5 +185,20 @@
             </Grid>
         </Grid>
         <Frame x:Name="info" Grid.Column="1" Grid.Row="1"  Margin="15, 45, 15, 15" HorizontalAlignment="Center"/>
+        <ComboBox x:Name="yearComboBox" Grid.Column="1" Grid.Row="1" MaxHeight="20" Width="90"  VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,15,25,0" Visibility="Visible">
+            <ComboBoxItem IsSelected="True">
+                <TextBlock FontFamily="Segoe UI Light">Year 1</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock FontFamily="Segoe UI Light">Year 2</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock FontFamily="Segoe UI Light">Year 3</TextBlock>
+            </ComboBoxItem>
+        </ComboBox>
+        <Border Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1 ,1" />
+        <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="1, 1, 0, 1"/>
+        <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1, 0, 1, 0"/>
+        <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="0, 0, 1, 0"/>
     </Grid>
 </Window>

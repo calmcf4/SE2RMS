@@ -37,11 +37,11 @@
         <TextBlock Grid.Column="0" Grid.Row="7" Text="Sunday" Padding="29" FontFamily="Segoe UI Bold" FontSize="16"/>
         <!--#endregion-->
         <!--#region Times-->
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="09:00" FontFamily="Segoe UI Light" Padding="80, 0, 80, 0"/>
-        <TextBlock Grid.Column="2" Grid.Row="0" Text="11:00" FontFamily="Segoe UI Light" Padding="80, 0, 80, 0"/>
-        <TextBlock Grid.Column="3" Grid.Row="0" Text="13:00" FontFamily="Segoe UI Light" Padding="80, 0, 80, 0"/>
-        <TextBlock Grid.Column="4" Grid.Row="0" Text="15:00" FontFamily="Segoe UI Light" Padding="80, 0, 80, 0"/>
-        <TextBlock Grid.Column="5" Grid.Row="0" Text="17:00" FontFamily="Segoe UI Light" Padding="80, 0, 80, 0"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="09:00" FontFamily="Segoe UI Bold" Padding="80, 0, 80, 0"/>
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="11:00" FontFamily="Segoe UI Bold" Padding="80, 0, 80, 0"/>
+        <TextBlock Grid.Column="3" Grid.Row="0" Text="13:00" FontFamily="Segoe UI Bold" Padding="80, 0, 80, 0"/>
+        <TextBlock Grid.Column="4" Grid.Row="0" Text="15:00" FontFamily="Segoe UI Bold" Padding="80, 0, 80, 0"/>
+        <TextBlock Grid.Column="5" Grid.Row="0" Text="17:00" FontFamily="Segoe UI Bold" Padding="80, 0, 80, 0"/>
         <!--#endregion-->
         <!--#region Lessons-->
         <TextBlock Grid.Column="1" Grid.Row="1" Text="C1001" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" FontSize="20"/>
@@ -94,6 +94,14 @@
         <Border Grid.Column="5" Grid.Row="5" BorderBrush="Black" BorderThickness="1" />
         <Border Grid.Column="5" Grid.Row="6" BorderBrush="Black" BorderThickness="1" />
         <Border Grid.Column="5" Grid.Row="7" BorderBrush="Black" BorderThickness="1" />
+        <!--#endregion-->
+        <!--#region Coloring-->
+        <Grid Grid.Column="0" Grid.Row="0" Background="#ade1ee" />
+        <Grid Grid.Column="1" Grid.Row="0" Background="#ade1ee" Panel.ZIndex="-1" />
+        <Grid Grid.Column="2" Grid.Row="0" Background="#ade1ee" Panel.ZIndex="-1" />
+        <Grid Grid.Column="3" Grid.Row="0" Background="#ade1ee" Panel.ZIndex="-1" />
+        <Grid Grid.Column="4" Grid.Row="0" Background="#ade1ee" Panel.ZIndex="-1" />
+        <Grid Grid.Column="5" Grid.Row="0" Background="#ade1ee" Panel.ZIndex="-1" />
         <!--#endregion-->
     </Grid>
 </Page>
