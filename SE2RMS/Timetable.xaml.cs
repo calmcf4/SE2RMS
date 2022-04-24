@@ -16,30 +16,13 @@ using System.Windows.Shapes;
 namespace SE2RMS
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Timetable.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Timetable : Page
     {
-        public MainWindow()
+        public Timetable()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {            
-        }
-
-        private void timeTableBtnClick(object sender, RoutedEventArgs e)
-        {
-            info.Content = new Timetable();
-            title.Text = "Timetables";
-        }
     }
-
-   
 }

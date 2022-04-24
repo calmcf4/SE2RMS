@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SE2RMS"
         mc:Ignorable="d"
         Title="Woodlands University College Record Management System" Height="768" Width="1366" >
-    <Grid ShowGridLines="False">
+    <Grid ShowGridLines="false">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -44,6 +44,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
+            <TextBlock x:Name="title" Grid.Column="0" Text="Home" FontFamily="Segoe UI Bold" Foreground="White" FontSize="50" VerticalAlignment="Bottom" Margin="20,0,0,0"/>
             <Grid Grid.Column="1" ShowGridLines="False" Background="#ade1ee">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="45"></RowDefinition>
@@ -127,7 +128,7 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Grid.Row="3" Content="Timetables" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                <Button Grid.Row="3" Content="Timetables" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="timeTableBtnClick">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
@@ -178,5 +179,6 @@
                 </Button>
             </Grid>
         </Grid>
+        <Frame x:Name="info" Grid.Column="1" Grid.Row="1"  Margin="15, 45, 15, 15" HorizontalAlignment="Center"/>
     </Grid>
 </Window>
