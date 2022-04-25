@@ -112,7 +112,7 @@
                     <RowDefinition Height="45" />
                     <RowDefinition Height="45" />
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Content="Home" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                <Button x:Name="homeButton" Grid.Row="0" Content="Home" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="homeButtonClicked">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
@@ -184,8 +184,8 @@
                 </Button>
             </Grid>
         </Grid>
-        <Frame x:Name="info" Grid.Column="1" Grid.Row="1"  Margin="15, 45, 15, 15" HorizontalAlignment="Center"/>
-        <ComboBox x:Name="yearComboBox" Grid.Column="1" Grid.Row="1" MaxHeight="20" Width="90"  VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,15,25,0" Visibility="Visible">
+        <Frame x:Name="info" Grid.Column="1" Grid.Row="1"  Margin="15, 45, 15, 15" HorizontalAlignment="Center" NavigationUIVisibility="Hidden"/>
+        <ComboBox x:Name="yearComboBox" Grid.Column="1" Grid.Row="1" MaxHeight="20" Width="90"  VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,15,25,0" Visibility="Hidden">
             <ComboBoxItem IsSelected="True">
                 <TextBlock FontFamily="Segoe UI Light">Year 1</TextBlock>
             </ComboBoxItem>

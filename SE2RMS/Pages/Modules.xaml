@@ -8,7 +8,7 @@
       d:DesignHeight="535" d:DesignWidth="1050"
       Title="Students">
 
-    <Grid Background="White" ShowGridLines="True">
+    <Grid Background="White" ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
@@ -23,14 +23,135 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="Mod Code" FontFamily="Segoe UI Light" Padding="40, 10, 40, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="Level" FontFamily="Segoe UI Light" Padding="40, 10, 40, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="2" Grid.Row="0" Text="Points" FontFamily="Segoe UI Light" Padding="40, 10, 40, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="3" Grid.Row="0" Text="Title" FontFamily="Segoe UI Light" Padding="110, 10, 110, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="4" Grid.Row="0" Text="Assessment 1" FontFamily="Segoe UI Light" Padding="35, 10, 35, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="5" Grid.Row="0" Text="Assessment 2" FontFamily="Segoe UI Light" Padding="35, 10, 35, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="6" Grid.Row="0" Text="Exam" FontFamily="Segoe UI Light" Padding="40, 10, 40, 10" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <TextBlock Grid.Column="7" Grid.Row="0" Text="Room" FontFamily="Segoe UI Light" Padding="35, 10, 35, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Mod Code" FontFamily="Segoe UI Bold" Padding="40, 10, 40, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="Level" FontFamily="Segoe UI Bold" Padding="40, 10, 40, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="Points" FontFamily="Segoe UI Bold" Padding="40, 10, 40, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="3" Grid.Row="0" Text="Title" FontFamily="Segoe UI Bold" Padding="110, 10, 110, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="4" Grid.Row="0" Text="Assessment 1" FontFamily="Segoe UI Bold" Padding="35, 10, 35, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="5" Grid.Row="0" Text="Assessment 2" FontFamily="Segoe UI Bold" Padding="35, 10, 35, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="6" Grid.Row="0" Text="Exam" FontFamily="Segoe UI Bold" Padding="40, 10, 40, 10" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="7" Grid.Row="0" Text="Room" FontFamily="Segoe UI Bold" Padding="35, 10, 35, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListView Grid.Column="0" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="C1001" FontFamily="Segoe UI Light" />
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="C1002" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="C1003" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="C1004" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="1" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="1" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="1" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="1" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="1" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="2" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="20" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="20" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="20" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="20" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="3" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="Computing Mathematics" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Systems Architecture" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Problems Solving" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Software Modelling 1" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="4" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="50%" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="50%" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="50%" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="50%" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="5" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="-" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="-" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="-" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="-" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="6" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="50%" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="50%" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="50%" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="50%" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="7" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="C1" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="C2" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="C3" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="C4" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <!--#region Borders-->
+        <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="1"/>
+        <Border Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="2" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="3" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="4" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="5" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="6" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="7" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+            <!--#endregion-->
     </Grid>
 </Page>

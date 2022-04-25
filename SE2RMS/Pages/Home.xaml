@@ -1,0 +1,70 @@
+﻿<Page x:Class="SE2RMS.Pages.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SE2RMS.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="535" d:DesignWidth="1050"
+      Title="Home">
+
+    <Grid Background="#ade1ee">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Width="300" Margin="25, 0, 25 , 0" HorizontalAlignment="Left">
+            <TextBlock Text="My Schedule" FontFamily="Segoe UI Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 15, 0 ,0" FontSize="24"/>
+            <ListView Margin="0, 15, 0 ,0" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center">
+                <ListViewItem>
+                    <TextBlock Text="Lecture 1 : 09:00 - 11:00" FontFamily="Segoe UI Light"/>
+                </ListViewItem>
+                <ListViewItem Margin="0, 15, 0, 0">
+                    <TextBlock Text="Lecture 2 : 11:00 - 13:00" FontFamily="Segoe UI Light"/>
+                </ListViewItem>
+                <ListViewItem Margin="0, 15, 0, 0">
+                    <TextBlock Text="Meeting : 14:00 - 15:00" FontFamily="Segoe UI Light"/>
+                </ListViewItem>
+                <ListViewItem Margin="0, 15, 0, 0">
+                    <TextBlock Text="Lecture 3 : 15:00 - 17:00" FontFamily="Segoe UI Light"/>
+                </ListViewItem>
+            </ListView>
+        </StackPanel>
+        <Grid Grid.Column="1" Margin="25, 0 ,25, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image Source="\Images\profilepicture.jpg" Grid.Row="0" Margin="0, 15, 0 ,0" />
+            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" Margin="0, 15, 0 ,0"/>
+            <TextBlock Grid.Row="1" Margin="0, 15, 0 ,0" Text="Dr Simon White" FontFamily="Segoe UI Bold"  TextAlignment="Center" FontSize="25"/>
+            <Calendar Grid.Row="2" Margin="0, 15, 0 ,0" />
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="375" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Background="White">
+                    <TextBlock Text="Upcoming Events" FontFamily="Segoe UI Bold" FontSize="26" TextAlignment="Center" />
+                    <TextBlock Text="Careers Fair" FontFamily="Segoe UI Light" FontSize="22" TextAlignment="Center" Margin="0, 15, 0, 0"/>
+                    <TextBlock Text="New Student intake" FontFamily="Segoe UI Light" FontSize="22" TextAlignment="Center" Margin="0, 15, 0, 0"/>
+                    <TextBlock Text="Careers Fair" FontFamily="Segoe UI Light" FontSize="22" TextAlignment="Center" Margin="0, 15, 0, 0"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="0, 25, 0, 0">
+                    <TextBlock Text="Recent Messages" TextAlignment="Center" FontFamily="Segoe UI Bold"/>
+                </StackPanel>
+                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1" Margin="0, 25, 0, 0" Background="White" Panel.ZIndex="-1"/>
+                <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1, 1 , 1, 1" />
+            </Grid>
+        </Grid>
+        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+    </Grid>
+</Page>

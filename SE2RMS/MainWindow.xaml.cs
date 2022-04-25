@@ -24,6 +24,8 @@ namespace SE2RMS
         public MainWindow()
         {
             InitializeComponent();
+            info.Content = new Home();
+            changeButtonColours(homeButton);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,10 +42,7 @@ namespace SE2RMS
             info.Content = new Timetable();
             title.Text = "Timetables";
             yearComboBox.Visibility = Visibility.Visible;
-            timetablesButton.Background = new SolidColorBrush(Colors.White);
-            timetablesButton.Foreground = new SolidColorBrush(Colors.Black);
-            modulesButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
-            modulesButton.Foreground = new SolidColorBrush (Colors.White);
+            changeButtonColours(timetablesButton);
         }
 
         private void modulesButtonClick(object sender, RoutedEventArgs e)
@@ -51,10 +50,28 @@ namespace SE2RMS
             info.Content = new Modules();
             title.Text = "Modules";
             yearComboBox.Visibility = Visibility.Visible;
-            modulesButton.Background = new SolidColorBrush(Colors.White);
-            modulesButton.Foreground = new SolidColorBrush(Colors.Black);
+            changeButtonColours(modulesButton);
+        }
+
+        private void homeButtonClicked(object sender, RoutedEventArgs e)
+        {
+            info.Content = new Home();
+            title.Text = "Home";
+            yearComboBox.Visibility = Visibility.Hidden;
+            changeButtonColours(homeButton);
+        }
+
+        private void changeButtonColours(Button button)
+        {
             timetablesButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
-            timetablesButton.Foreground = new SolidColorBrush (Colors.White);
+            timetablesButton.Foreground = new SolidColorBrush(Colors.White);
+            modulesButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
+            modulesButton.Foreground = new SolidColorBrush(Colors.White);
+            homeButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
+            homeButton.Foreground = new SolidColorBrush(Colors.White);
+
+            button.Background = new SolidColorBrush(Colors.White);
+            button.Foreground = new SolidColorBrush(Colors.Black);
         }
     }
 
