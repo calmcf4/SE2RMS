@@ -69,9 +69,19 @@ namespace SE2RMS
             modulesButton.Foreground = new SolidColorBrush(Colors.White);
             homeButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
             homeButton.Foreground = new SolidColorBrush(Colors.White);
+            studentsButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
+            studentsButton.Foreground = new SolidColorBrush(Colors.White);
 
             button.Background = new SolidColorBrush(Colors.White);
             button.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        private void studentsButtonClick(object sender, RoutedEventArgs e)
+        {
+            info.Content = new Students();
+            title.Text = "Students";
+            yearComboBox.Visibility = Visibility.Visible;
+            changeButtonColours(studentsButton);
         }
     }
 

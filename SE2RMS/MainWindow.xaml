@@ -34,7 +34,7 @@
                 </Button>
             </Grid>
             <Grid Grid.Column="1" Background="#ade1ee">
-                <Image Source="Images/newLogo.jpeg" Margin="5,5,5,5" />
+                <Image Source="Images/logo.png" Margin="5,5,5,5" />
             </Grid>
         </Grid>
         <Grid Grid.Column="1" ShowGridLines="False" Background="#ade1ee">
@@ -119,7 +119,7 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Grid.Row="1" Content="Students" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                <Button x:Name="studentsButton" Grid.Row="1" Content="Students" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="studentsButtonClick">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />

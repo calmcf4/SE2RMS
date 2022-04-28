@@ -9,12 +9,14 @@
 
   <ItemGroup>
     <None Remove="Images\help.png" />
+    <None Remove="Images\logo.png" />
     <None Remove="Images\newLogo.jpeg" />
     <None Remove="Images\profilepicture.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\help.png" />
+    <Resource Include="Images\logo.png" />
     <Resource Include="Images\newLogo.jpeg" />
     <Resource Include="Images\profilepicture.jpg" />
   </ItemGroup>

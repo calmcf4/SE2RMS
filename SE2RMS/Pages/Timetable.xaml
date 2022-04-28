@@ -28,13 +28,13 @@
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         <!--#region Weekdays-->
-        <TextBlock Grid.Column="0" Grid.Row="1" Text="Monday" Padding="29" FontFamily="Segoe UI Bold" FontSize="16"/>
-        <TextBlock Grid.Column="0" Grid.Row="2" Text="Tuesday" Padding="29" FontFamily="Segoe UI Bold" FontSize="16"/>
-        <TextBlock Grid.Column="0" Grid.Row="3" Text="Wednesday" Padding="29" FontFamily="Segoe UI Bold" FontSize="16"/>
-        <TextBlock Grid.Column="0" Grid.Row="4" Text="Thursday" Padding="29" FontFamily="Segoe UI Bold" FontSize="16"/>
-        <TextBlock Grid.Column="0" Grid.Row="5" Text="Friday" Padding="29" FontFamily="Segoe UI Bold" FontSize="16"/>
-        <TextBlock Grid.Column="0" Grid.Row="6" Text="Saturday" Padding="29" FontFamily="Segoe UI Bold" FontSize="16"/>
-        <TextBlock Grid.Column="0" Grid.Row="7" Text="Sunday" Padding="29" FontFamily="Segoe UI Bold" FontSize="16"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Monday" Padding="27" FontFamily="Segoe UI Bold" FontSize="16"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Tuesday" Padding="27" FontFamily="Segoe UI Bold" FontSize="16"/>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Wednesday" Padding="27" FontFamily="Segoe UI Bold" FontSize="16"/>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="Thursday" Padding="27" FontFamily="Segoe UI Bold" FontSize="16"/>
+        <TextBlock Grid.Column="0" Grid.Row="5" Text="Friday" Padding="27" FontFamily="Segoe UI Bold" FontSize="16"/>
+        <TextBlock Grid.Column="0" Grid.Row="6" Text="Saturday" Padding="27" FontFamily="Segoe UI Bold" FontSize="16"/>
+        <TextBlock Grid.Column="0" Grid.Row="7" Text="Sunday" Padding="27" FontFamily="Segoe UI Bold" FontSize="16"/>
         <!--#endregion-->
         <!--#region Times-->
         <TextBlock Grid.Column="1" Grid.Row="0" Text="09:00" FontFamily="Segoe UI Bold" Padding="80, 0, 80, 0"/>

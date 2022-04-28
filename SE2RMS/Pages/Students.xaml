@@ -1,0 +1,192 @@
+﻿<Page x:Class="SE2RMS.Pages.Students"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SE2RMS.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="535" d:DesignWidth="1050"
+      Title="Students">
+
+    <Grid Background="White" ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Status" FontFamily="Segoe UI Bold" Padding="20, 10, 20, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="Student ID" FontFamily="Segoe UI Bold" Padding="10, 10, 10, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="First Name" FontFamily="Segoe UI Bold" Padding="10, 10, 10, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="3" Grid.Row="0" Text="Middle Name" FontFamily="Segoe UI Bold" Padding="0, 10, 0, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="4" Grid.Row="0" Text="Surname" FontFamily="Segoe UI Bold" Padding="15, 10, 15, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="5" Grid.Row="0" Text="Term Address" FontFamily="Segoe UI Bold" Padding="15, 10, 15, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="6" Grid.Row="0" Text="Non-Term Address" FontFamily="Segoe UI Bold" Padding="10, 10, 10, 10" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="7" Grid.Row="0" Text="Mobile Number" FontFamily="Segoe UI Bold" Padding="15, 10, 15, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="8" Grid.Row="0" Text="Email" FontFamily="Segoe UI Bold" Padding="15, 10, 15, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="9" Grid.Row="0" Text="Course Code" FontFamily="Segoe UI Bold" Padding="15, 10, 15, 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListView Grid.Column="0" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="Live" FontFamily="Segoe UI Light" />
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Live" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Live" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Live" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="1" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="20010341" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="20010342" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="20010343" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="20010344" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="2" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="Mark" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Sam" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="William" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Joe" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="3" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Alexander" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="4" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="Williams" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Baker" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Smith" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Freeman" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="5" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="21, Elm Street" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="265, Oak Drive" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="90, Elm Street" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="3, Oak Drive" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="6" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="21, Elm Street" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="265, Oak Drive" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="90, Elm Street" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="3, Oak Drive" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="7" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="04857 948493" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="459833 256987" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="56974 569324" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="78325 015698" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="8" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="M.Williams@gmail.com" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="SamBaker@yahoo.com" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="WillASmith.outlook.com" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="JoeeF@gmail.com" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <ListView Grid.Column="9" Grid.Row="1">
+            <ListViewItem>
+                <TextBlock Text="Computing" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Computing" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Computing" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="Computing" FontFamily="Segoe UI Light"/>
+            </ListViewItem>
+        </ListView>
+        <!--#region Borders-->
+        <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="1"/>
+        <Border Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="2" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="3" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="4" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="5" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="6" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="7" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="8" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <Border Grid.Column="9" Grid.Row="0" BorderBrush="Black" BorderThickness="0, 1, 1, 1"/>
+        <!--#endregion-->
+    </Grid>
+</Page>
