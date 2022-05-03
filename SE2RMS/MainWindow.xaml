@@ -83,13 +83,14 @@
                         </Button.Resources>
                     </Button>
                 </Grid>
-                <TextBox Grid.Row="1" Width="120" Height="20" BorderBrush="Black" Text="Search...">
+                <Image Source="Images\profilepicture.jpg" Grid.Row="1" HorizontalAlignment="Right" />
+                <!--<TextBox Grid.Row="1" Width="120" Height="20" BorderBrush="Black" Text="Search...">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5" />
                         </Style>
                     </TextBox.Resources>
-                </TextBox>
+                </TextBox>-->
             </Grid>
 
         </Grid>

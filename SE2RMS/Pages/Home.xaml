@@ -5,66 +5,123 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SE2RMS.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="535" d:DesignWidth="1050"
+      d:DesignHeight="784" d:DesignWidth="1642"
       Title="Home">
 
-    <Grid Background="#ade1ee">
+    <Grid Background="#ade1ee" ShowGridLines="False">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Width="300" Margin="25, 0, 25 , 0" HorizontalAlignment="Left">
-            <TextBlock Text="My Schedule" FontFamily="Segoe UI Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 15, 0 ,0" FontSize="24"/>
-            <ListView Margin="0, 15, 0 ,0" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center">
-                <ListViewItem>
-                    <TextBlock Text="Lecture 1 : 09:00 - 11:00" FontFamily="Segoe UI Light"/>
-                </ListViewItem>
-                <ListViewItem Margin="0, 15, 0, 0">
-                    <TextBlock Text="Lecture 2 : 11:00 - 13:00" FontFamily="Segoe UI Light"/>
-                </ListViewItem>
-                <ListViewItem Margin="0, 15, 0, 0">
-                    <TextBlock Text="Meeting : 14:00 - 15:00" FontFamily="Segoe UI Light"/>
-                </ListViewItem>
-                <ListViewItem Margin="0, 15, 0, 0">
-                    <TextBlock Text="Lecture 3 : 15:00 - 17:00" FontFamily="Segoe UI Light"/>
-                </ListViewItem>
-            </ListView>
-        </StackPanel>
-        <Grid Grid.Column="1" Margin="25, 0 ,25, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Welcome Dr Simon White" VerticalAlignment="Center" FontFamily="Segoe UI Bold" FontSize="32" Margin="0, 0, 0, 20"/>
+        <Grid ShowGridLines="False" Grid.Row="1" Grid.Column="0" Background="#ade1ee">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-            <Image Source="\Images\profilepicture.jpg" Grid.Row="0" Margin="0, 15, 0 ,0" />
-            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" Margin="0, 15, 0 ,0"/>
-            <TextBlock Grid.Row="1" Margin="0, 15, 0 ,0" Text="Dr Simon White" FontFamily="Segoe UI Bold"  TextAlignment="Center" FontSize="25"/>
-            <Calendar Grid.Row="2" Margin="0, 15, 0 ,0" />
+            <!--#region Times-->
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="09:00" FontFamily="Segoe UI Bold" FontSize="18" Padding="30, 0, 30, 0"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="11:00" FontFamily="Segoe UI Bold" FontSize="18" Padding="30, 0, 30, 0"/>
+            <TextBlock Grid.Row="0" Grid.Column="3" Text="13:00" FontFamily="Segoe UI Bold" FontSize="18" Padding="30, 0, 30, 0"/>
+            <TextBlock Grid.Row="0" Grid.Column="4" Text="15:00" FontFamily="Segoe UI Bold" FontSize="18" Padding="30, 0, 30, 0"/>
+            <TextBlock Grid.Row="0" Grid.Column="5" Text="17:00" FontFamily="Segoe UI Bold" FontSize="18" Padding="30, 0, 30, 0"/>
+            <!--#endregion-->
+            <!--#region WeekDays-->
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Monday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Tuesday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Wednesday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Thursday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Friday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Saturday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Sunday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
+            <!--#endregion-->
+            <!--#region Borders-->
+            <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1" Background="LightGray" Panel.ZIndex="-1" />
+            <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Background="LightGray" Panel.ZIndex="-1" />
+            <Border Grid.Column="0" Grid.Row="3" BorderBrush="Black" BorderThickness="1" Background="LightGray" Panel.ZIndex="-1" />
+            <Border Grid.Column="0" Grid.Row="4" BorderBrush="Black" BorderThickness="1" Background="LightGray" Panel.ZIndex="-1" />
+            <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="1" Background="LightGray" Panel.ZIndex="-1" />
+            <Border Grid.Column="0" Grid.Row="6" BorderBrush="Black" BorderThickness="1" Background="LightGray" Panel.ZIndex="-1" />
+            <Border Grid.Column="0" Grid.Row="7" BorderBrush="Black" BorderThickness="1" Background="LightGray" Panel.ZIndex="-1" />
+            <Border Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="1" Grid.Row="3" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="1" Grid.Row="4" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="1" Grid.Row="5" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="1" Grid.Row="6" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="1" Grid.Row="7" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="2" Grid.Row="1" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="2" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="2" Grid.Row="3" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="2" Grid.Row="4" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="2" Grid.Row="5" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="2" Grid.Row="6" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="2" Grid.Row="7" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="3" Grid.Row="1" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="3" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="3" Grid.Row="3" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="3" Grid.Row="4" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="3" Grid.Row="5" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="3" Grid.Row="6" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="3" Grid.Row="7" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="4" Grid.Row="1" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="4" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="4" Grid.Row="3" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="4" Grid.Row="4" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="4" Grid.Row="5" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="4" Grid.Row="6" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="4" Grid.Row="7" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="5" Grid.Row="1" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="5" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="5" Grid.Row="3" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="5" Grid.Row="4" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="5" Grid.Row="5" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="5" Grid.Row="6" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <Border Grid.Column="5" Grid.Row="7" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+            <!--#endregion-->
         </Grid>
-        <Grid Grid.Column="2">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="375" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0" Background="White">
-                    <TextBlock Text="Upcoming Events" FontFamily="Segoe UI Bold" FontSize="26" TextAlignment="Center" />
-                    <TextBlock Text="Careers Fair" FontFamily="Segoe UI Light" FontSize="22" TextAlignment="Center" Margin="0, 15, 0, 0"/>
-                    <TextBlock Text="New Student intake" FontFamily="Segoe UI Light" FontSize="22" TextAlignment="Center" Margin="0, 15, 0, 0"/>
-                    <TextBlock Text="Careers Fair" FontFamily="Segoe UI Light" FontSize="22" TextAlignment="Center" Margin="0, 15, 0, 0"/>
+        <Grid ShowGridLines="False" Grid.Row="1" Grid.Column="1" Margin="15, 25, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto" Height="300" >
+                <StackPanel >
+                    <TextBlock Text="Recent Messages" FontFamily="Segoe UI Bold" FontSize="18" Padding="4" HorizontalAlignment="Center"/>
                 </StackPanel>
-                <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="0, 25, 0, 0">
-                    <TextBlock Text="Recent Messages" TextAlignment="Center" FontFamily="Segoe UI Bold"/>
-                </StackPanel>
-                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1" Margin="0, 25, 0, 0" Background="White" Panel.ZIndex="-1"/>
-                <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1, 1 , 1, 1" />
-            </Grid>
+            </ScrollViewer>
+            <Calendar Grid.Row="1" Margin="0, 20, 0, 0"/>
+            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
         </Grid>
-        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" Width="300">
+            <StackPanel>
+                <TextBlock Text="Announcements" HorizontalAlignment="Center" FontFamily="Segoe UI Bold" FontSize="26" Margin="20, 20, 0, 0"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="1" Margin="20,20,0,0" Background="White" Panel.ZIndex="-1"/>
     </Grid>
 </Page>
