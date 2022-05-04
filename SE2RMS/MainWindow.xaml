@@ -120,7 +120,7 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Grid.Row="2" Content="Tutors" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                <Button x:Name="tutorsButton" Grid.Row="2" Content="Tutors" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="tutorsButtonClick">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />

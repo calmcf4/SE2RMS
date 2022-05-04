@@ -57,6 +57,15 @@ namespace SE2RMS
             changeButtonColours(homeButton);
         }
 
+        private void tutorsButtonClick(object sender, RoutedEventArgs e)
+        {
+            info.Content = new Tutors();
+            title.Text = "Tutors";
+            liveComboBox.Visibility = Visibility.Visible;
+            searchBox.Visibility = Visibility.Visible;
+            changeButtonColours(tutorsButton);
+        }
+
         private void changeButtonColours(Button button)
         {
             timetablesButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
@@ -66,6 +75,8 @@ namespace SE2RMS
             homeButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
             homeButton.Foreground = new SolidColorBrush(Colors.White);
             studentsButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
+            studentsButton.Foreground = new SolidColorBrush(Colors.White);
+            tutorsButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
             studentsButton.Foreground = new SolidColorBrush(Colors.White);
 
             button.Background = new SolidColorBrush(Colors.White);
@@ -91,6 +102,8 @@ namespace SE2RMS
         {
             searchBox.Text = "Searching...";
         }
+
+
     }
 
    
