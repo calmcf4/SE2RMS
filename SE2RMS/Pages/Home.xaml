@@ -48,13 +48,13 @@
             <TextBlock Grid.Row="0" Grid.Column="5" Text="17:00" FontFamily="Segoe UI Bold" FontSize="18" Padding="30, 0, 30, 0"/>
             <!--#endregion-->
             <!--#region WeekDays-->
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Monday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Tuesday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
-            <TextBlock Grid.Row="3" Grid.Column="0" Text="Wednesday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
-            <TextBlock Grid.Row="4" Grid.Column="0" Text="Thursday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
-            <TextBlock Grid.Row="5" Grid.Column="0" Text="Friday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
-            <TextBlock Grid.Row="6" Grid.Column="0" Text="Saturday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
-            <TextBlock Grid.Row="7" Grid.Column="0" Text="Sunday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 20, 0, 20"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Monday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 17, 0, 17"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Tuesday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 17, 0, 17"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Wednesday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 17, 0, 17"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Thursday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 17, 0, 17"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Friday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 17, 0, 17"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Saturday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 17, 0, 17"/>
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Sunday" FontFamily="Segoe UI Bold" FontSize="24" Padding="0, 17, 0, 17"/>
             <!--#endregion-->
             <!--#region Borders-->
             <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1" Background="LightGray" Panel.ZIndex="-1" />
@@ -106,8 +106,9 @@
                 <ColumnDefinition Width="175"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="275" />
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto" Height="300" >
                 <StackPanel >
@@ -118,10 +119,10 @@
             <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1" Background="White" Panel.ZIndex="-1"/>
         </Grid>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" Width="300">
-            <StackPanel>
+            <StackPanel Margin="0, 0, 0, 30">
                 <TextBlock Text="Announcements" HorizontalAlignment="Center" FontFamily="Segoe UI Bold" FontSize="26" Margin="20, 20, 0, 0"/>
             </StackPanel>
         </ScrollViewer>
-        <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="1" Margin="20,20,0,0" Background="White" Panel.ZIndex="-1"/>
+        <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="1" Margin="20,20,0,30" Background="White" Panel.ZIndex="-1"/>
     </Grid>
 </Page>

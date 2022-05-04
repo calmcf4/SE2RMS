@@ -28,20 +28,13 @@ namespace SE2RMS
             changeButtonColours(homeButton);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {            
-        }
-
         private void timeTableButtonClick(object sender, RoutedEventArgs e)
         {
             info.Content = new Timetable();
             title.Text = "Timetables";
             yearComboBox.Visibility = Visibility.Visible;
+            searchBox.Visibility = Visibility.Hidden;
+            liveComboBox.Visibility = Visibility.Hidden;
             changeButtonColours(timetablesButton);
         }
 
@@ -50,6 +43,7 @@ namespace SE2RMS
             info.Content = new Modules();
             title.Text = "Modules";
             yearComboBox.Visibility = Visibility.Visible;
+            searchBox.Visibility = Visibility.Visible;
             changeButtonColours(modulesButton);
         }
 
@@ -58,6 +52,8 @@ namespace SE2RMS
             info.Content = new Home();
             title.Text = "Home";
             yearComboBox.Visibility = Visibility.Hidden;
+            searchBox.Visibility = Visibility.Hidden;
+            liveComboBox.Visibility = Visibility.Hidden;
             changeButtonColours(homeButton);
         }
 
@@ -81,7 +77,19 @@ namespace SE2RMS
             info.Content = new Students();
             title.Text = "Students";
             yearComboBox.Visibility = Visibility.Visible;
+            searchBox.Visibility = Visibility.Visible;
+            liveComboBox.Visibility = Visibility.Visible;
             changeButtonColours(studentsButton);
+        }
+
+        private void searchBoxSelect(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            searchBox.Text = "";
+        }
+
+        private void searchBoxDeselect(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            searchBox.Text = "Searching...";
         }
     }
 
