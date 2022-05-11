@@ -66,9 +66,14 @@ namespace SE2RMS
             searchBox.Visibility = Visibility.Hidden;
             liveComboBox.Visibility = Visibility.Hidden;
             changeButtonColours(homeButton);
-            Course course = _context.Courses.Where(c => c.Name == "Computing").FirstOrDefault<Course>();
-            Trace.WriteLine(course.CourseId);
-            Trace.WriteLine(course.Name);
+            //Course course = _context.Courses.Where(c => c.Name == "Computing").FirstOrDefault<Course>();
+            //Trace.WriteLine(course.CourseId);
+            //Trace.WriteLine(course.Name);
+            Student student = _context.Students.Where(s => s.StudentId == 1).FirstOrDefault<Student>();
+            Trace.WriteLine(student.FirstName);
+            Trace.WriteLine(student.LastName);
+            Trace.WriteLine(student.Email);
+            Trace.WriteLine(student.Status);
         }
 
         private void tutorsButtonClick(object sender, RoutedEventArgs e)
@@ -128,16 +133,16 @@ namespace SE2RMS
 
             Student student = new Student();
             student.FirstName = "Jerry";
-            student.MiddleName = "Middle";
+            student.MiddleName = "";
             student.LastName = "Smith";
             student.TermAddress = "Test Address";
             student.NonTermAddress = "Non Term Address";
             student.PhoneNumber = "Test Phone";
             student.Email = "Test Email";
             student.EntryQuals = "Test ENtry";
-            //student.CourseId = 0;
+            student.CourseId = 1;
             student.Status = "Live";
-            student.DormancyReason = "uifsdhufs";
+            student.DormancyReason = "";
             _context.Students.Add(student);
             _context.SaveChanges();
 

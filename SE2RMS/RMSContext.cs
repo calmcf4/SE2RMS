@@ -10,14 +10,14 @@ namespace SE2RMS
 {
     public class RMSContext : DbContext
     {
-        public DbSet<Assessment> Assessments { get; set; }
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Grade> Grades { get; set; }
-        public DbSet<Module> Modules { get; set; }
-        public DbSet<Register> Registers { get; set; }
-        public DbSet<Staff> Staff { get; set; }       
+        public DbSet<Assessment>? Assessments { get; set; }
+        public DbSet<Course>? Courses { get; set; }
+        public DbSet<Grade>? Grades { get; set; }
+        public DbSet<Module>? Modules { get; set; }
+        public DbSet<Register>? Registers { get; set; }
+        public DbSet<Staff>? Staff { get; set; }       
         public DbSet<Student>? Students { get; set; }
-        public DbSet<Student_Module> Student_Modules { get; set; }
+        public DbSet<Student_Module>? Student_Modules { get; set; }
 
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder)

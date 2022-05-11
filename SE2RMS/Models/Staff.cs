@@ -10,7 +10,7 @@ namespace SE2RMS.Models
     {
         public int StaffId { get; set; }
         public string FirstName { get; set; }
-        public string MiddleName { get; set; }
+        public string? MiddleName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
         public int CourseId { get; set; }        
@@ -19,6 +19,6 @@ namespace SE2RMS.Models
         public string Role { get; set; }
         public string Subject { get; set; }
         public string Status { get; set; }
-        public string DormanyReason { get; set; }
+        public string? DormancyReason { get; set; }
     }
 }
