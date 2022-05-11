@@ -1,6 +1,9 @@
-﻿using SE2RMS.Pages;
+﻿using Microsoft.EntityFrameworkCore;
+using SE2RMS.Models;
+using SE2RMS.Pages;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,12 +24,20 @@ namespace SE2RMS
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly RMSContext _context = new RMSContext();
+        private string page;
         public MainWindow()
         {
             InitializeComponent();
             info.Content = new Home();
+            page = "Home";
             changeButtonColours(homeButton);
+            _context.Database.EnsureCreated();
+            Console.WriteLine("testing");
+
+
         }
+
 
         private void timeTableButtonClick(object sender, RoutedEventArgs e)
         {
@@ -55,6 +66,9 @@ namespace SE2RMS
             searchBox.Visibility = Visibility.Hidden;
             liveComboBox.Visibility = Visibility.Hidden;
             changeButtonColours(homeButton);
+            Course course = _context.Courses.Where(c => c.Name == "Computing").FirstOrDefault<Course>();
+            Trace.WriteLine(course.CourseId);
+            Trace.WriteLine(course.Name);
         }
 
         private void tutorsButtonClick(object sender, RoutedEventArgs e)
@@ -64,6 +78,7 @@ namespace SE2RMS
             liveComboBox.Visibility = Visibility.Visible;
             searchBox.Visibility = Visibility.Visible;
             changeButtonColours(tutorsButton);
+            
         }
 
         private void changeButtonColours(Button button)
@@ -103,7 +118,30 @@ namespace SE2RMS
             searchBox.Text = "Searching...";
         }
 
+        private void addStudent(object sender, RoutedEventArgs e)
+        {
 
+            //Course course = new Course();
+            //course.Name = "Computing";
+            //_context.Courses.Add(course);
+            //_context.SaveChanges();
+
+            Student student = new Student();
+            student.FirstName = "Jerry";
+            student.MiddleName = "Middle";
+            student.LastName = "Smith";
+            student.TermAddress = "Test Address";
+            student.NonTermAddress = "Non Term Address";
+            student.PhoneNumber = "Test Phone";
+            student.Email = "Test Email";
+            student.EntryQuals = "Test ENtry";
+            //student.CourseId = 0;
+            student.Status = "Live";
+            student.DormancyReason = "uifsdhufs";
+            _context.Students.Add(student);
+            _context.SaveChanges();
+
+        }
     }
 
    
