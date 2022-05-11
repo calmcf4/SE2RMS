@@ -77,7 +77,7 @@ namespace SE2RMS
             studentsButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
             studentsButton.Foreground = new SolidColorBrush(Colors.White);
             tutorsButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
-            studentsButton.Foreground = new SolidColorBrush(Colors.White);
+            tutorsButton.Foreground = new SolidColorBrush(Colors.White);
 
             button.Background = new SolidColorBrush(Colors.White);
             button.Foreground = new SolidColorBrush(Colors.Black);
