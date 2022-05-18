@@ -25,17 +25,30 @@ namespace SE2RMS
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly RMSContext _context = new RMSContext();
-        private string page;
+        private readonly RMSContext _context = new RMSContext();        
+
+        private enum Page
+        {
+            Home,
+            Students,
+            Tutors,
+            Timetable,
+            Modules
+
+        }
+
+        Page page { get; set; }
+
+        
         public MainWindow()
         {
             InitializeComponent();
-            info.Content = new Home();
-            page = "Home";
+            info.Content = new Home();            
             changeButtonColours(homeButton);
             _context.Database.EnsureCreated();
             Console.WriteLine("testing");
-
+            page = Page.Home;
+            addButton.Visibility = Visibility.Hidden;
 
         }
 
@@ -48,6 +61,9 @@ namespace SE2RMS
             searchBox.Visibility = Visibility.Hidden;
             liveComboBox.Visibility = Visibility.Hidden;
             changeButtonColours(timetablesButton);
+            page = Page.Timetable;
+            addButton.Visibility = Visibility.Hidden;
+
         }
 
         private void modulesButtonClick(object sender, RoutedEventArgs e)
@@ -57,6 +73,9 @@ namespace SE2RMS
             yearComboBox.Visibility = Visibility.Visible;
             searchBox.Visibility = Visibility.Visible;
             changeButtonColours(modulesButton);
+            page = Page.Modules;
+            addButton.Visibility = Visibility.Visible;
+            Staff staff = new Staff();            
         }
 
         private void homeButtonClicked(object sender, RoutedEventArgs e)
@@ -67,14 +86,8 @@ namespace SE2RMS
             searchBox.Visibility = Visibility.Hidden;
             liveComboBox.Visibility = Visibility.Hidden;
             changeButtonColours(homeButton);
-            //Course course = _context.Courses.Where(c => c.Name == "Computing").FirstOrDefault<Course>();
-            //Trace.WriteLine(course.CourseId);
-            //Trace.WriteLine(course.Name);
-            Student student = _context.Students.Where(s => s.StudentId == 1).FirstOrDefault<Student>();
-            Trace.WriteLine(student.FirstName);
-            Trace.WriteLine(student.LastName);
-            Trace.WriteLine(student.Email);
-            Trace.WriteLine(student.Status);
+            page = Page.Home;
+            addButton.Visibility = Visibility.Hidden;
         }
 
         private void tutorsButtonClick(object sender, RoutedEventArgs e)
@@ -84,7 +97,8 @@ namespace SE2RMS
             liveComboBox.Visibility = Visibility.Visible;
             searchBox.Visibility = Visibility.Visible;
             changeButtonColours(tutorsButton);
-            
+            page = Page.Tutors;
+            addButton.Visibility = Visibility.Visible;
         }
 
         private void changeButtonColours(Button button)
@@ -112,6 +126,8 @@ namespace SE2RMS
             searchBox.Visibility = Visibility.Visible;
             liveComboBox.Visibility = Visibility.Visible;
             changeButtonColours(studentsButton);
+            page = Page.Students;
+            addButton.Visibility = Visibility.Visible;
         }
 
         private void searchBoxSelect(object sender, KeyboardFocusChangedEventArgs e)
@@ -124,10 +140,21 @@ namespace SE2RMS
             searchBox.Text = "Search...";
         }
 
-        private void addStudent(object sender, RoutedEventArgs e)
+        private void AddRecord(object sender, RoutedEventArgs e)
         {
-            AddStudentDialog addStudentDialog = new AddStudentDialog();
-            addStudentDialog.ShowDialog();
+            switch(page)
+            {
+                case Page.Students:
+                    AddStudentDialog addStudentDialog = new AddStudentDialog();
+                    addStudentDialog.ShowDialog();
+                    break;
+
+                case Page.Tutors:
+                    AddTutorDialog addTutorDialog = new AddTutorDialog();
+                    addTutorDialog.ShowDialog();
+                    break;
+            }
+            
         }
     }
 

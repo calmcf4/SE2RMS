@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SE2RMS.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,14 @@ namespace SE2RMS.Pages
     /// </summary>
     public partial class Tutors : Page
     {
+        private readonly RMSContext _context = new RMSContext();
         public Tutors()
         {
             InitializeComponent();
+            List<Staff> staffList = new List<Staff>();
+            var staff = _context.Staff;
+            staffList = staff.ToList();
+            tutorsGrid.ItemsSource = staffList;
         }
     }
 }

@@ -180,7 +180,7 @@
         </Grid>
         <Frame x:Name="info" Grid.Column="1" Grid.Row="1"  Margin="15, 45, 15, 15" HorizontalAlignment="Center" NavigationUIVisibility="Hidden"/>
 		<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="addButton" Height="20" Width="120" VerticalAlignment="Top" Margin="0, 15, 15, 0" Content="Add" Click="addStudent"/>
+            <Button x:Name="addButton" Height="20" Width="120" VerticalAlignment="Top" Margin="0, 15, 15, 0" Content="Add" Click="AddRecord"/>
             <ComboBox x:Name="liveComboBox" MaxHeight="20" Width="90"  VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,15,25,0" Visibility="Visible">
                 <ComboBoxItem IsSelected="True">
                     <TextBlock FontFamily="Segoe UI Light">Live</TextBlock>
