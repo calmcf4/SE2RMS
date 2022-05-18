@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SE2RMS.Dialogs;
 using SE2RMS.Models;
 using SE2RMS.Pages;
 using System;
@@ -120,32 +121,13 @@ namespace SE2RMS
 
         private void searchBoxDeselect(object sender, KeyboardFocusChangedEventArgs e)
         {
-            searchBox.Text = "Searching...";
+            searchBox.Text = "Search...";
         }
 
         private void addStudent(object sender, RoutedEventArgs e)
         {
-
-            //Course course = new Course();
-            //course.Name = "Computing";
-            //_context.Courses.Add(course);
-            //_context.SaveChanges();
-
-            Student student = new Student();
-            student.FirstName = "Jerry";
-            student.MiddleName = "";
-            student.LastName = "Smith";
-            student.TermAddress = "Test Address";
-            student.NonTermAddress = "Non Term Address";
-            student.PhoneNumber = "Test Phone";
-            student.Email = "Test Email";
-            student.EntryQuals = "Test ENtry";
-            student.CourseId = 1;
-            student.Status = "Live";
-            student.DormancyReason = "";
-            _context.Students.Add(student);
-            _context.SaveChanges();
-
+            AddStudentDialog addStudentDialog = new AddStudentDialog();
+            addStudentDialog.ShowDialog();
         }
     }
 
