@@ -11,8 +11,7 @@ namespace SE2RMS.Models
         public int ModuleId { get; set; }
         public int Level { get; set; }
         public int Points { get; set; }
-        public string Title { get; set; }
-        public string Address { get; set; }
+        public string Title { get; set; }        
         public int CourseId { get; set; }        
         public string Room { get; set; }
         public string RoomType { get; set; }

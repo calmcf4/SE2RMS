@@ -153,6 +153,14 @@ namespace SE2RMS
                     AddTutorDialog addTutorDialog = new AddTutorDialog();
                     addTutorDialog.ShowDialog();
                     break;
+
+                case Page.Modules:
+                    AddModuleDialog addModuleDialog = new AddModuleDialog();
+                    addModuleDialog.ShowDialog();
+                    break;
+
+                default:
+                    break;
             }
             
         }
