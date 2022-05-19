@@ -9,6 +9,18 @@
       Title="Students">
 
     <Grid Background="White" ShowGridLines="False">
-        <DataGrid Name="modulesGrid" Height="535" Width="1050"></DataGrid>
+        <DataGrid Name="modulesGrid" Height="535" Width="1050" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Module Code" Binding="{Binding ModuleId}" />
+                <DataGridTextColumn Header="Level" Binding="{Binding Level}" Width="auto"/>
+                <DataGridTextColumn Header="Points" Binding="{Binding Points}" Width="auto"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Room" Binding="{Binding Room}" Width="auto"/>
+                <DataGridTextColumn Header="Room Type" Binding="{Binding RoomType}" Width="*"/>
+                <DataGridTextColumn Header="Room Capacity" Binding="{Binding RoomCapacity}" Width="auto"/>
+                <DataGridTextColumn Header="Lecture Day" Binding="{Binding LectureDay}" Width="*"/>
+                <DataGridTextColumn Header="Lecture Time" Binding="{Binding LectureTime}" Width="auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

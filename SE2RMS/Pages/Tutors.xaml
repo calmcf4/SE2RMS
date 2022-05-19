@@ -9,6 +9,18 @@
       Title="Tutors">
 
     <Grid Background="White" ShowGridLines="False">
-        <DataGrid Name="tutorsGrid" Height="535" Width="1050"></DataGrid>
+        <DataGrid Name="tutorsGrid" Height="535" Width="1050" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" Width="*"/>
+                <DataGridTextColumn Header="Middle Name" Binding="{Binding MiddleName}" Width="*"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" Width="*"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="*"/>
+                <DataGridTextColumn Header="Phone Number" Binding="{Binding PhoneNumber}" Width="auto"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="auto"/>
+                <DataGridTextColumn Header="Subject" Binding="{Binding Subject}" Width="auto"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
