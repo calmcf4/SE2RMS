@@ -29,6 +29,7 @@ namespace SE2RMS.Dialogs
         private void addModule(object sender, RoutedEventArgs e)
         {
             Module module = new Module();
+            module.ModuleCode = moduleCodeTextBox.Text;
             module.Level = Int32.Parse(levelTextBox.Text);
             module.Points = Int32.Parse(pointsTextBox.Text);
             module.Title = titleTextBox.Text;

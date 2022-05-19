@@ -365,3 +365,4 @@ FodyWeavers.xsd
 /SE2RMS/Migrations/20220511134310_InitialMigration.Designer.cs
 /SE2RMS/Migrations/20220511134310_InitialMigration.cs
 /SE2RMS/SE2RMS.db
+/SE2RMS/Migrations

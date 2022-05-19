@@ -38,4 +38,8 @@
     <Resource Include="Images\profilepicture.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

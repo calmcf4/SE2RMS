@@ -25,27 +25,30 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
+        <Label Grid.Column="1" Grid.Row="1">Module Code</Label>
+        <TextBox Name="moduleCodeTextBox" Grid.Column="1" Grid.Row="2" MinWidth="250" />
+        <Label Grid.Column="1" Grid.Row="3">Level</Label>
+        <TextBox Name="levelTextBox" Grid.Column="1" Grid.Row="4" MinWidth="250"></TextBox>
+        <Label Grid.Column="1" Grid.Row="5">Points</Label>
+        <TextBox Name="pointsTextBox" Grid.Column="1" Grid.Row="6" MinWidth="250" />
+        <Label Grid.Column="1" Grid.Row="7">Title</Label>
+        <TextBox Name="titleTextBox" Grid.Column="1" Grid.Row="8" MinWidth="250"/>
+        <Label Grid.Column="1" Grid.Row="9">Room</Label>
+        <TextBox Name ="roomTextBox" Grid.Column="1" Grid.Row="10" MinWidth="250" />
+        <Label Grid.Column="1" Grid.Row="11">Room Type</Label>
+        <TextBox Name="roomTypeTextBox" Grid.Column="1" Grid.Row="12" MinWidth="250" />
+        <Label Grid.Column="1" Grid.Row="13">Room Capacity</Label>
+        <TextBox Name="roomCapacityTextBox" Grid.Column="1" Grid.Row="14" MinWidth="250" />
+        <Label Grid.Column="1" Grid.Row="15">Lecture Day</Label>
+        <TextBox Name="lectureDayTextBox" Grid.Column="1" Grid.Row="16" MinWidth="250" />
+        <Label Grid.Column="1" Grid.Row="17">Lecture Time</Label>
+        <TextBox Name="lectureTimeTextBox" Grid.Column="1" Grid.Row="18" MinWidth="250" />
 
-        <Label Grid.Column="1">Level</Label>
-        <TextBox Name="levelTextBox" Grid.Column="1" Grid.Row="1" MinWidth="250"></TextBox>
-        <Label Grid.Column="1" Grid.Row="2">Points</Label>
-        <TextBox Name="pointsTextBox" Grid.Column="1" Grid.Row="3" MinWidth="250" />
-        <Label Grid.Column="1" Grid.Row="4">Title</Label>
-        <TextBox Name="titleTextBox" Grid.Column="1" Grid.Row="5" MinWidth="250"/>
-        <Label Grid.Column="1" Grid.Row="6">Room</Label>
-        <TextBox Name ="roomTextBox" Grid.Column="1" Grid.Row="7" MinWidth="250" />
-        <Label Grid.Column="1" Grid.Row="8">Room Type</Label>
-        <TextBox Name="roomTypeTextBox" Grid.Column="1" Grid.Row="9" MinWidth="250" />
-        <Label Grid.Column="1" Grid.Row="10">Room Capacity</Label>
-        <TextBox Name="roomCapacityTextBox" Grid.Column="1" Grid.Row="11" MinWidth="250" />
-        <Label Grid.Column="1" Grid.Row="12">Lecture Day</Label>
-        <TextBox Name="lectureDayTextBox" Grid.Column="1" Grid.Row="13" MinWidth="250" />
-        <Label Grid.Column="1" Grid.Row="14">Lecture Time</Label>
-        <TextBox Name="lectureTimeTextBox" Grid.Column="1" Grid.Row="15" MinWidth="250" />
-
-        <WrapPanel Grid.Row="16" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
+        <WrapPanel Grid.Row="19" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
             <Button IsDefault="True" Name="btnDialogOk" MinWidth="60" Margin="0,0,10,0" Click="addModule" >_Ok</Button>
             <Button IsCancel="True" MinWidth="60">_Cancel</Button>
         </WrapPanel>
