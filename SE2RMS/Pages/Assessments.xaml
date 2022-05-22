@@ -1,4 +1,4 @@
-﻿<Page x:Class="SE2RMS.Pages.Tutors"
+﻿<Page x:Class="SE2RMS.Pages.Assessments"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,21 +6,15 @@
       xmlns:local="clr-namespace:SE2RMS.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="535" d:DesignWidth="1050"
-      Title="Tutors">
+      Title="Assessments">
 
-    <Grid Background="White" ShowGridLines="False">
-        <DataGrid Name="tutorsGrid" Height="535" Width="1050" AutoGenerateColumns="False" IsReadOnly="True">
+    <Grid Background="White">
+        <DataGrid Name="assessmentsGrid" Height="535" Width="1050" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Visibility="Collapsed" Binding="{Binding StaffId}" />
-                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" Width="*"/>
-                <DataGridTextColumn Header="Middle Name" Binding="{Binding MiddleName}" Width="*"/>
-                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" Width="*"/>
-                <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="*"/>
-                <DataGridTextColumn Header="Phone Number" Binding="{Binding PhoneNumber}" Width="auto"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
-                <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="auto"/>
-                <DataGridTextColumn Header="Subject" Binding="{Binding Subject}" Width="auto"/>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="auto"/>
+                <DataGridTextColumn Header="ID" Binding="{Binding AssessmentId}" Visibility="Collapsed"/>
+                <DataGridTextColumn Header="Module Code" Binding="{Binding ModuleCode}" />
+                <DataGridTextColumn Header="Assessment Type" Binding="{Binding AssessmentType}" />
+                <DataGridTextColumn Header="Weighting" Binding="{Binding Weighting}" />
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

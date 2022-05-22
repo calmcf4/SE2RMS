@@ -26,6 +26,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
 
@@ -45,9 +47,11 @@
         <TextBox Name="emailTextBox" Grid.Column="1" Grid.Row="13" MinWidth="250" />
         <Label Grid.Column="1" Grid.Row="14">Entry Qualifications:</Label>
         <TextBox Name="entryQualsTextBox" Grid.Column="1" Grid.Row="15" MinWidth="250" />
-        
-        <WrapPanel Grid.Row="16" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
-            <Button IsDefault="True" Name="btnDialogOk" MinWidth="60" Margin="0,0,10,0" Click="addStudent">_Ok</Button>
+        <Label Grid.Column="1" Grid.Row="16">Personal Tutor</Label>
+        <ComboBox Name="personalTutorComboBox" Grid.Column="1" Grid.Row="17" MinWidth="250" />
+
+        <WrapPanel Grid.Row="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button IsDefault="True" Name="btnDialogOk" MinWidth="60" Margin="0,0,10,0" Click="AddStudent">_Ok</Button>
             <Button IsCancel="True" MinWidth="60">_Cancel</Button>
         </WrapPanel>
     </Grid>

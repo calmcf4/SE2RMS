@@ -23,7 +23,7 @@ namespace SE2RMS
             DbContextOptionsBuilder optionsBuilder)
         {
             object p = optionsBuilder.UseSqlite(
-                "Data Source=SE2GP.db");
+                "Data Source=SE2GP2.db");
             optionsBuilder.UseLazyLoadingProxies();
         }
     }

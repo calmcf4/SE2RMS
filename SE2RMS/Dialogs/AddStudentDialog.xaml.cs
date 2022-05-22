@@ -25,6 +25,7 @@ namespace SE2RMS.Dialogs
         public AddStudentDialog()
         {
             InitializeComponent();
+            LoadTutors();
         }
 
         private void Window_ContentRendered(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace SE2RMS.Dialogs
             firstNameTextBox.Focus();
         }
 
-        private void addStudent(object sender, RoutedEventArgs e)
+        private void AddStudent(object sender, RoutedEventArgs e)
         {
             Student student = new Student();
             student.FirstName = firstNameTextBox.Text;
@@ -47,9 +48,21 @@ namespace SE2RMS.Dialogs
             student.CourseId = 1;
             student.Status = "Live";
             student.DormancyReason = "";
+            student.PersonalTutor = personalTutorComboBox.Text.ToString();
             _context.Students.Add(student);
             _context.SaveChanges();
             this.DialogResult = true;
+        }
+
+        private void LoadTutors()
+        {
+            List<Staff> staffList = new List<Staff>();
+            staffList = _context.Staff.ToList();
+            foreach (Staff staff in staffList)
+            {
+                personalTutorComboBox.Items.Add(staff.FirstName + " " + staff.LastName);
+            }
+            personalTutorComboBox.SelectedIndex = 0;
         }
     }
 }

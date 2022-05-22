@@ -1,4 +1,5 @@
-﻿using SE2RMS.Models;
+﻿using SE2RMS.Dialogs;
+using SE2RMS.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,10 +31,33 @@ namespace SE2RMS.Pages
         public Students()
         {
             InitializeComponent();
+            LoadData();
+
+        }
+
+        private void LoadData()
+        {
             List<Student> studentList = new List<Student>();
             var students = _context.Students;
             studentList = students.ToList();
             studentsGrid.ItemsSource = studentList;
+        }
+
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            int studentId = (studentsGrid.SelectedItem as Student).StudentId;
+
+            EditStudentDialog editStudentDialog = new EditStudentDialog(studentId);
+            editStudentDialog.ShowDialog();
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            int studentId = (studentsGrid.SelectedItem as Student).StudentId;
+            Student student = _context.Students.Where(x => x.StudentId == studentId).FirstOrDefault();
+            _context.Students.Remove(student);
+            _context.SaveChanges();
+            LoadData();
         }
     }
 }

@@ -33,7 +33,8 @@ namespace SE2RMS
             Students,
             Tutors,
             Timetable,
-            Modules
+            Modules,
+            Assessments
 
         }
 
@@ -49,6 +50,8 @@ namespace SE2RMS
             Console.WriteLine("testing");
             page = Page.Home;
             addButton.Visibility = Visibility.Hidden;
+            if (!DataCheck())
+                DummyData();
 
         }
 
@@ -113,6 +116,8 @@ namespace SE2RMS
             studentsButton.Foreground = new SolidColorBrush(Colors.White);
             tutorsButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
             tutorsButton.Foreground = new SolidColorBrush(Colors.White);
+            assessmentsButton.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#568259");
+            assessmentsButton.Foreground = new SolidColorBrush(Colors.White);
 
             button.Background = new SolidColorBrush(Colors.White);
             button.Foreground = new SolidColorBrush(Colors.Black);
@@ -159,10 +164,45 @@ namespace SE2RMS
                     addModuleDialog.ShowDialog();
                     break;
 
+                case Page.Assessments:
+                    AddAssessmentDialog addAssessmentDialog = new AddAssessmentDialog();
+                    addAssessmentDialog.ShowDialog();
+                    break;
+
                 default:
                     break;
             }
             
+        }
+
+        private void AssessmentsButtonClick(object sender, RoutedEventArgs e)
+        {
+            info.Content = new Assessments();
+            title.Text = "Assessments";
+            yearComboBox.Visibility = Visibility.Visible;
+            searchBox.Visibility = Visibility.Visible;
+            changeButtonColours(assessmentsButton);
+            page = Page.Assessments;
+            addButton.Visibility = Visibility.Visible;
+        }
+
+        private bool DataCheck()
+        {
+            Course course = new Course();
+            course = _context.Courses.Where(c => c.CourseId == 1).FirstOrDefault();
+            if (course == null)
+                return false;
+            
+            return true;
+        }
+
+        private void DummyData()
+        {
+            Course course = new Course();
+            course.Name = "Computing";
+            course.CourseId = 1;
+            _context.Courses.Add(course);
+            _context.SaveChanges();
         }
     }
 

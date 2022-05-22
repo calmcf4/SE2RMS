@@ -11,15 +11,31 @@
     <Grid Background="White" ShowGridLines="False">
         <DataGrid Name="modulesGrid" Height="535" Width="1050" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Module Code" Binding="{Binding ModuleId}" />
+                <DataGridTextColumn Header="ID" Binding="{Binding ModuleId}" Visibility="Collapsed"/>
+                <DataGridTextColumn Header="Module Code" Binding="{Binding ModuleCode}" />
                 <DataGridTextColumn Header="Level" Binding="{Binding Level}" Width="auto"/>
                 <DataGridTextColumn Header="Points" Binding="{Binding Points}" Width="auto"/>
+                <DataGridTextColumn Header="Module Leader" Binding="{Binding ModuleLeader}" />
                 <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
                 <DataGridTextColumn Header="Room" Binding="{Binding Room}" Width="auto"/>
                 <DataGridTextColumn Header="Room Type" Binding="{Binding RoomType}" Width="*"/>
                 <DataGridTextColumn Header="Room Capacity" Binding="{Binding RoomCapacity}" Width="auto"/>
                 <DataGridTextColumn Header="Lecture Day" Binding="{Binding LectureDay}" Width="*"/>
                 <DataGridTextColumn Header="Lecture Time" Binding="{Binding LectureTime}" Width="auto"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="editButton" Content="Edit" Click="editButton_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="deleteButton" Content="Delete" Click="deleteButton_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

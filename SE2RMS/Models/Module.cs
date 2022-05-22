@@ -10,6 +10,7 @@ namespace SE2RMS.Models
     {
         public int ModuleId { get; set; }
         public string ModuleCode { get; set;}
+        public string ModuleLeader { get; set; }
         public int Level { get; set; }
         public int Points { get; set; }
         public string Title { get; set; }        

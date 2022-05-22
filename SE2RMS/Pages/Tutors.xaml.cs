@@ -1,4 +1,5 @@
-﻿using SE2RMS.Models;
+﻿using SE2RMS.Dialogs;
+using SE2RMS.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +26,32 @@ namespace SE2RMS.Pages
         public Tutors()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
             List<Staff> staffList = new List<Staff>();
             var staff = _context.Staff;
             staffList = staff.ToList();
             tutorsGrid.ItemsSource = staffList;
+        }
+
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            int staffId = (tutorsGrid.SelectedItem as Staff).StaffId;
+
+            EditTutorDialog editTutorDialog = new EditTutorDialog(staffId);
+            editTutorDialog.ShowDialog();
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            int staffId = (tutorsGrid.SelectedItem as Staff).StaffId;
+            Staff staff = _context.Staff.Where(s => s.StaffId == staffId).FirstOrDefault();
+            _context.Staff.Remove(staff);
+            _context.SaveChanges();
+            LoadData();
         }
     }
 }

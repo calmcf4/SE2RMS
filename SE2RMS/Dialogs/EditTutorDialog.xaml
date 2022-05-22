@@ -1,13 +1,15 @@
-﻿<Window x:Class="SE2RMS.Dialogs.AddTutorDialog"
+﻿<Window x:Class="SE2RMS.Dialogs.EditTutorDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Add Tutor" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen"        >
+        Title="Edit Tutor" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen"        >
     <Grid Margin="15">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -51,11 +53,20 @@
         </ComboBox>
         <Label Grid.Column="1" Grid.Row="14">Subject:</Label>
         <ComboBox Name="subjectComboBox" Grid.Column="1" Grid.Row="15" MinWidth="250">
-            
+
+        </ComboBox>
+        <Label Grid.Column="1" Grid.Row="16">Status</Label>
+        <ComboBox Name="statusComboBox" Grid.Column="1" Grid.Row="17" MinWidth="250">
+            <ComboBoxItem>
+                <TextBlock>Live</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock>Dormant</TextBlock>
+            </ComboBoxItem>
         </ComboBox>
 
-        <WrapPanel Grid.Row="16" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
-            <Button IsDefault="True" Name="btnDialogOk" MinWidth="60" Margin="0,0,10,0" Click="AddTutor">_Ok</Button>
+        <WrapPanel Grid.Row="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button IsDefault="True" Name="btnDialogOk" MinWidth="60" Margin="0,0,10,0" Click="EditTutor" >_Ok</Button>
             <Button IsCancel="True" MinWidth="60">_Cancel</Button>
         </WrapPanel>
     </Grid>

@@ -11,16 +11,31 @@
     <Grid Background="White" ShowGridLines="False">
         <DataGrid Name="studentsGrid" Height="535" Width="1050" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" Width="120"/>
-                <DataGridTextColumn Header="Middle Name" Binding="{Binding MiddleName}" Width="120"/>
-                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" Width="120"/>
-                <DataGridTextColumn Header="Term Address" Binding="{Binding TermAddress}" Width="170"/>
+                <DataGridTextColumn Header="ID" Visibility="Collapsed" Binding="{Binding StudentId}" />
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" Width="80"/>
+                <DataGridTextColumn Header="Middle Name" Binding="{Binding MiddleName}" Width="90"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" Width="80"/>
+                <DataGridTextColumn Header="Term Address" Binding="{Binding TermAddress}" Width="150"/>
                 <DataGridTextColumn Header="Non Term Address" Binding="{Binding NonTermAddress}" Width="*"/>
                 <DataGridTextColumn Header="Phone Number" Binding="{Binding PhoneNumber}" />
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="100"/>
                 <DataGridTextColumn Header="Entry Qualifications" Binding="{Binding EntryQuals}" />
+                <DataGridTextColumn Header="Personal Tutor" Binding="{Binding PersonalTutor}" />
                 <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
-
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="editButton" Content="Edit" Click="editButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="deleteButton" Content="Delete" Click="deleteButton_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

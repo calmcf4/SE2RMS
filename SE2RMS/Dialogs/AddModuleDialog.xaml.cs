@@ -24,6 +24,18 @@ namespace SE2RMS.Dialogs
         public AddModuleDialog()
         {
             InitializeComponent();
+            LoadTutors();
+        }
+
+        private void LoadTutors()
+        {
+            List<Staff> staffList = new List<Staff>();
+            staffList = _context.Staff.ToList();
+            foreach (Staff staff in staffList)
+            {
+                moduleLeaderComboBox.Items.Add(staff.FirstName + " " + staff.LastName);
+            }
+            moduleLeaderComboBox.SelectedIndex = 0;
         }
 
         private void addModule(object sender, RoutedEventArgs e)
@@ -41,6 +53,7 @@ namespace SE2RMS.Dialogs
             module.Student_ModuleId = 1;
             module.LectureDay = lectureDayTextBox.Text;
             module.LectureTime = lectureTimeTextBox.Text;
+            module.ModuleLeader = moduleLeaderComboBox.Text.ToString();
             _context.Modules.Add(module);
             _context.SaveChanges();
             this.DialogResult = true;

@@ -1,6 +1,7 @@
 ﻿using SE2RMS.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,9 +25,10 @@ namespace SE2RMS.Dialogs
         public AddTutorDialog()
         {
             InitializeComponent();
+            GetCourses();
         }
 
-        private void addTutor(object sender, RoutedEventArgs e)
+        private void AddTutor(object sender, RoutedEventArgs e)
         {
             Staff staff = new Staff();
             staff.FirstName = firstNameTextBox.Text;
@@ -35,14 +37,27 @@ namespace SE2RMS.Dialogs
             staff.Address = addressTextBox.Text;
             staff.PhoneNumber = phoneNumberTextBox.Text;
             staff.Email = emailTextBox.Text;
-            staff.Role = roleTextBox.Text;
-            staff.Subject = subjectTextBox.Text;
+            staff.Role = roleComboBox.Text.ToString();
+            staff.Subject = subjectComboBox.Text.ToString();
             staff.Status = "Live";
             staff.DormancyReason = "";
             staff.CourseId = 1;
             _context.Staff.Add(staff);
             _context.SaveChanges();
-            this.DialogResult = true;
+            this.DialogResult = true;            
+        }
+
+        private void GetCourses()
+        {
+            List<Course> courses = new List<Course>();
+            courses = _context.Courses.ToList();                          
+            foreach (Course course in courses)
+            {
+                subjectComboBox.Items.Add(course.Name);
+            }
+            subjectComboBox.SelectedIndex = 0;
+            roleComboBox.SelectedIndex = 0;
+
         }
     }
 }

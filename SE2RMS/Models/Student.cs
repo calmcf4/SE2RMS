@@ -20,6 +20,7 @@ namespace SE2RMS.Models
         public int CourseId { get; set; }
         public string? Status { get; set; }
         public string? DormancyReason { get; set; }
+        public string? PersonalTutor { get; set; }
 
     }
 }

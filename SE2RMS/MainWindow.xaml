@@ -120,7 +120,7 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="tutorsButton" Grid.Row="2" Content="Tutors" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="tutorsButtonClick">
+                <Button x:Name="tutorsButton" Grid.Row="2" Content="Staff" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="tutorsButtonClick">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
@@ -162,7 +162,7 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button Grid.Row="8" Content="Assessments" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light">
+                <Button x:Name="assessmentsButton" Grid.Row="8" Content="Assessments" Height="35" Background="#568259" Foreground="white" FontFamily="Segoe UI Light" Click="AssessmentsButtonClick">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
